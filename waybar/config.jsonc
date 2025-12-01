@@ -1,0 +1,129 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 32,
+  "spacing": 6,
+
+  "modules-left": ["custom/logo", "hyprland/workspaces"],
+
+  "modules-center": ["network", "clock"],
+
+  "modules-right": [
+    "tray",
+    "pulseaudio",
+    "cpu",
+    "memory",
+    "battery",
+    "custom/power",
+  ],
+
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{icon}",
+    "format-icons": {
+      "default": "",
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "10",
+    },
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": [],
+      "9": [],
+    },
+  },
+
+  "cpu": {
+    "format": "  {usage}%",
+    "tooltip": false,
+  },
+
+  "memory": {
+    "format": "󰍛  {used}GB / {total}GB",
+    "interval": 5,
+  },
+
+  "custom/gpu": {
+    "exec": "~/.config/waybar/scripts/gpu.sh",
+    "interval": 5,
+    "tooltip": false,
+  },
+
+  "tray": {
+    "spacing": 10,
+  },
+
+  "clock": {
+    "format": "󰥔  {:%a %d %b • %I:%M %p}",
+    "format-alt": "  {:%A, %d %B %Y • %I:%M %p}",
+    "tooltip-format": "{calendar}",
+  },
+
+  "network": {
+    "format-wifi": "   {essid} ",
+    "format-ethernet": "󰀂  LAN",
+    "format-disconnected": "󰖪  Disconnected",
+    "tooltip-format-wifi": "SSID: {essid}\nSignal: {signalStrength}%\n⬇ {bandwidthDownBytes}/s\n⬆ {bandwidthUpBytes}/s",
+    "interval": 3,
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+  },
+
+  "pulseaudio": {
+    "format": "{icon}   {volume}%",
+    "format-muted": "󰝟  0%",
+    "format-icons": {
+      "default": ["󰕿", "󰖀", ""],
+      "headphone": "",
+    },
+    "tooltip-format": "Volume: {volume}%",
+  },
+
+  "bluetooth": {
+    "format": " Bluetooth",
+    "format-connected": " {device}",
+    "format-disconnected": " Disconnected",
+    "tooltip-format": "{device|No device}\nStatus: {status|Unknown}\nMAC: {mac|N/A}",
+    "interval": 5,
+  },
+
+  "battery": {
+    "format": "{capacity}% {icon}",
+    "format-icons": {
+      "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+      "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+    },
+    "format-full": " Charged",
+    "states": {
+      "warning": 20,
+      "critical": 10,
+    },
+    "tooltip": false,
+  },
+
+  "custom/logo": {
+    "format": "  ",
+    "on-click": "~/.config/rofi/launchers/misc/launcher.sh",
+    "tooltip": false,
+  },
+
+  "custom/power": {
+    "format": "󰤆",
+    "on-click": "wlogout",
+    "tooltip": false,
+  },
+}

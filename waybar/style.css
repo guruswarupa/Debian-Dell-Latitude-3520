@@ -1,0 +1,156 @@
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    font-family: Ubuntu;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+window#waybar {
+    background-color: #3b4252; /* Nord1 slightly lighter for better contrast */
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.8;
+}
+
+#workspaces {
+    background-color: transparent;
+}
+
+#workspaces button {
+    all: initial;
+    min-width: 0;
+    box-shadow: inset 0 -3px transparent;
+    padding: 2px 12px;
+    margin: 4px 3px;
+    border-radius: 4px;
+    background-color: #4c566a; /* Nord3: slightly lighter gray */
+    color: #eceff4; /* Nord5: bright text */
+}
+
+#workspaces button.active {
+    color: #2e3440; /* Nord0: dark text */
+    background-color: #d8dee9; /* Nord4: bright background for active */
+}
+
+#workspaces button:hover {
+    color: #2e3440;
+    background-color: #d8dee9;
+}
+
+#workspaces button.urgent {
+    background-color: #bf616a; /* Nord11: red alert */
+}
+
+#cpu,
+#memory,
+#custom-kernel,
+#custom-power,
+#custom-diskfree,
+#battery,
+#backlight,
+#pulseaudio,
+#network,
+#clock,
+#custom-gpu,
+#tray {
+    border-radius: 4px;
+    margin: 4px 3px;
+    padding: 2px 12px;
+    background-color: #4c566a; /* Nord3 for modules */
+    color: #eceff4; /* Nord5 for text */
+}
+
+#custom-kernel {
+    background-color: #bf616a; /* Red */
+    color: #eceff4;
+}
+
+#custom-power {
+    margin-right: 6px;
+    background-color: #ebcb8b; /* Yellow */
+    color: #2e3440;
+}
+
+#custom-diskfree {
+    background-color: #d08770; /* Orange */
+    color: #2e3440;
+}
+
+#custom-logo {
+    padding-right: 7px;
+    padding-left: 7px;
+    margin-left: 5px;
+    font-size: 15px;
+    border-radius: 8px 0 0 8px;
+    color: #88c0d0; /* Cyan */
+}
+
+#cpu {
+    background-color: #a3be8c; /* Green */
+    color: #2e3440;
+}
+
+#memory {
+    background-color: #81a1c1; /* Blue */
+    color: #2e3440;
+}
+
+#battery {
+    background-color: #b48ead; /* Purple */
+    color: #2e3440;
+}
+
+#battery.warning,
+#battery.critical,
+#battery.urgent {
+    background-color: #bf616a; /* Red */
+    color: #eceff4;
+}
+
+#battery.charging {
+    background-color: #a3be8c; /* Green */
+    color: #2e3440;
+}
+
+#backlight {
+    background-color: #d08770; /* Orange */
+    color: #2e3440;
+}
+
+#pulseaudio {
+    background-color: #81a1c1; /* Blue */
+    color: #2e3440;
+}
+
+#network {
+    background-color: #a3be8c; /* Green */
+    padding-right: 17px;
+    color: #2e3440;
+}
+
+#clock {
+    background-color: #b48ead; /* Purple */
+    color: #2e3440;
+}
+
+#custom-gpu {
+    background-color: #81a1c1; /* Blue */
+    color: #2e3440;
+}
+tooltip {
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #434c5e; /* Nord2: lighter for tooltip */
+    color: #eceff4;
+}
+
+tooltip label {
+    padding: 5px;
+    background-color: #434c5e; /* Nord2 */
+    color: #eceff4;
+}
