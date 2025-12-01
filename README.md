@@ -15,3 +15,7 @@
 - grim slurp wl-clipboard (for screenshot)
 - ly (TUI Display manager)
 - pulseaudio (sound)
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/bed08da2-0489-4ede-847d-2becf663018b" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/2e91c14c-b0ab-4ac9-a127-7c537b44acc7" />
+
