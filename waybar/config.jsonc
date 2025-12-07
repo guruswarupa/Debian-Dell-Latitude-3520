@@ -4,15 +4,22 @@
   "height": 32,
   "spacing": 6,
 
-  "modules-left": ["custom/logo", "hyprland/workspaces"],
+  "modules-left": [
+    "custom/logo",
+    "hyprland/workspaces",
+    "custom/cpu",
+    "custom/gpu",
+    "tray",
+  ],
 
-  "modules-center": ["network", "clock"],
+  "modules-center": ["clock"],
 
   "modules-right": [
-    "tray",
+    "custom/memory",
+    "custom/disk",
+    "backlight",
+    "network",
     "pulseaudio",
-    "cpu",
-    "memory",
     "battery",
     "custom/power",
   ],
@@ -48,22 +55,6 @@
     },
   },
 
-  "cpu": {
-    "format": "  {usage}%",
-    "tooltip": false,
-  },
-
-  "memory": {
-    "format": "󰍛  {used}GB / {total}GB",
-    "interval": 5,
-  },
-
-  "custom/gpu": {
-    "exec": "~/.config/waybar/scripts/gpu.sh",
-    "interval": 5,
-    "tooltip": false,
-  },
-
   "tray": {
     "spacing": 10,
   },
@@ -72,6 +63,12 @@
     "format": "󰥔  {:%a %d %b • %I:%M %p}",
     "format-alt": "  {:%A, %d %B %Y • %I:%M %p}",
     "tooltip-format": "{calendar}",
+  },
+
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "   {percent}%",
+    "tooltip": true,
   },
 
   "network": {
@@ -93,14 +90,6 @@
     "tooltip-format": "Volume: {volume}%",
   },
 
-  "bluetooth": {
-    "format": " Bluetooth",
-    "format-connected": " {device}",
-    "format-disconnected": " Disconnected",
-    "tooltip-format": "{device|No device}\nStatus: {status|Unknown}\nMAC: {mac|N/A}",
-    "interval": 5,
-  },
-
   "battery": {
     "format": "{capacity}% {icon}",
     "format-icons": {
@@ -113,6 +102,32 @@
       "critical": 10,
     },
     "tooltip": false,
+  },
+
+  "custom/disk": {
+    "exec": "~/.config/waybar/scripts/disk.sh",
+    "interval": 10,
+    "return-type": "json",
+  },
+
+  "custom/cpu": {
+    "exec": "~/.config/waybar/scripts/cpu.sh",
+    "return-type": "json",
+    "interval": 2,
+    "tooltip": true,
+  },
+
+  "custom/memory": {
+    "exec": "~/.config/waybar/scripts/memory.sh",
+    "return-type": "json",
+    "interval": 5,
+  },
+
+  "custom/gpu": {
+    "exec": "~/.config/waybar/scripts/gpu.sh",
+    "return-type": "json",
+    "interval": 3,
+    "tooltip": true,
   },
 
   "custom/logo": {

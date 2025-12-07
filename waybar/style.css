@@ -46,8 +46,6 @@ window#waybar.hidden {
     background-color: #bf616a; /* Nord11: red alert */
 }
 
-#cpu,
-#memory,
 #custom-kernel,
 #custom-power,
 #custom-diskfree,
@@ -57,6 +55,9 @@ window#waybar.hidden {
 #network,
 #clock,
 #custom-gpu,
+#custom-cpu,
+#custom-memory,
+#custom-disk,
 #tray {
     border-radius: 4px;
     margin: 4px 3px;
@@ -90,13 +91,13 @@ window#waybar.hidden {
     color: #88c0d0; /* Cyan */
 }
 
-#cpu {
-    background-color: #a3be8c; /* Green */
+#custom-cpu {
+    background-color: #81a1c1; /* Blue */
     color: #2e3440;
 }
 
-#memory {
-    background-color: #81a1c1; /* Blue */
+#custom-memory {
+    background-color: #d08770; /* Orange */
     color: #2e3440;
 }
 
@@ -118,12 +119,12 @@ window#waybar.hidden {
 }
 
 #backlight {
-    background-color: #d08770; /* Orange */
+    background-color: #a3be8c; /* Green */
     color: #2e3440;
 }
 
 #pulseaudio {
-    background-color: #81a1c1; /* Blue */
+    background-color: #a3be8c; /* Green */
     color: #2e3440;
 }
 
@@ -142,6 +143,12 @@ window#waybar.hidden {
     background-color: #81a1c1; /* Blue */
     color: #2e3440;
 }
+
+#custom-disk {
+    background-color: #d08770; /* Orange */
+    color: #2e3440;
+}
+
 tooltip {
     border-radius: 8px;
     padding: 15px;
